@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "c3619315-5ee4-4ae3-b382-fa55bf5a9249",
+		"name": "techradar",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Tech",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Javascript\",\r\n    \"active\": true,\r\n    \"category\": \"Frontend\",\r\n    \"moved\": 0\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/techs",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"techs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Tech",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"category\": \"Consulting\",\r\n    \"status\": \"assess\",\r\n    \"name\": \"Scrum Product Owner\",\r\n    \"active\": false,\r\n    \"description\": \"test description 2\",\r\n    \"moved\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/techs/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"techs",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Tech",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/techs",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"techs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete tech",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/techs/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"techs",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
