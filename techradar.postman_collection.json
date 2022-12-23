@@ -6,13 +6,13 @@
 	},
 	"item": [
 		{
-			"name": "Create Tech",
+			"name": "Create Blip",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Javascript\",\r\n    \"active\": true,\r\n    \"category\": \"Frontend\",\r\n    \"moved\": 0\r\n\r\n}",
+					"raw": "{\r\n    \"category\": \"Dev/Ops\",\r\n    \"status\": \"assess\",\r\n    \"name\": \"Scrum Product Owner\",\r\n    \"active\": true,\r\n    \"description\": \"test description\",\r\n    \"moved\": 0\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -20,20 +20,20 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/techs",
+					"raw": "localhost:8080/blips",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"techs"
+						"blips"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "Update Tech",
+			"name": "Update Blip",
 			"request": {
 				"method": "PUT",
 				"header": [],
@@ -47,13 +47,13 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/techs/:id",
+					"raw": "localhost:8080/blips/:id",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"techs",
+						"blips",
 						":id"
 					],
 					"variable": [
@@ -67,36 +67,36 @@
 			"response": []
 		},
 		{
-			"name": "Get Tech",
+			"name": "Get Blip",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/techs",
+					"raw": "localhost:8080/blips",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"techs"
+						"blips"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "Delete tech",
+			"name": "Delete blip",
 			"request": {
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/techs/:id",
+					"raw": "localhost:8080/blips/:id",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"techs",
+						"blips",
 						":id"
 					],
 					"variable": [
