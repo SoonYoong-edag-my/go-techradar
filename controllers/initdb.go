@@ -40,7 +40,7 @@ func init() {
 		db = dbConnect
 	}
 	// Migrate the schema
-	if err = db.AutoMigrate(&model.Tech{}); err != nil {
+	if err = db.AutoMigrate(&model.Blip{}); err != nil {
 		panic("failed to create schema")
 	}
 

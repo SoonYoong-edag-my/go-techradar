@@ -24,7 +24,7 @@ const (
 	Hold   Status = "hold"
 )
 
-type Tech struct {
+type Blip struct {
 	Id          uint     `json:"id" gorm:"primary_key"`
 	Category    Category `json:"category" binding:"required" validate:"oneof=Frontend Apps Backend Dev/Ops Consulting Application IT_Service"`
 	Status      Status   `json:"status" binding:"required" validate:"oneof=core assess hold adopt trial"`
@@ -34,7 +34,7 @@ type Tech struct {
 	Moved       int8     `json:"moved"`
 }
 
-func (t *Tech) Validate() error {
+func (t *Blip) Validate() error {
 	validate := validator.New()
 	return validate.Struct(t)
 }
